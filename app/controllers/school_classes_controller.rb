@@ -7,4 +7,12 @@ class SchoolClassesController < ApplicationController
         @school_class.save
         redirect_to school_class_path(@school_class)
     end
+
+    def new
+        @school_class = SchoolClass.new
+    end
+
+    def show
+
+    end
 end
