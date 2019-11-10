@@ -19,7 +19,7 @@ class StudentsController < ApplicationController
 
 	def update
 	  @student = Student.find(params[:id])
-	  @student.update(student_params(:title))
+	  @student.update(student_params)
 	  redirect_to student_path(@student)
 	end
 
@@ -30,6 +30,6 @@ class StudentsController < ApplicationController
 	private
 
 	def student_params(*args)
-		params.require(:student).permit(*args)
+		params.require(:student).permit!
 	end
 end
