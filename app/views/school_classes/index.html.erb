@@ -1,0 +1,10 @@
+<h1>School Index</h1>
+
+<% @schools.each do |c| %>
+    <ul>
+        <li>
+            <%= c.title %><br>
+            <%= c.room_number %>        
+        </li>
+    </ul>
+<% end %>
